@@ -1,10 +1,6 @@
 # autoguIGV
-
-<p align="center">
-  <img src="https://github.com/FerAmbriz/autoguIGV/blob/main/Example.gif" height="auto">
-</p>
-
 autoguIGV is a script that automates interaction with IGV to search specific sample sites using the python pyautogui library.
+
 ## Dependencies
 * IGV
 * pyautogui
@@ -31,3 +27,7 @@ Finally, once the corresponding modifications have been made, run the script wit
 ```
 python autoguIGV_bspwm.py
 ```
+
+<p align="center">
+  <img src="https://github.com/FerAmbriz/autoguIGV/blob/main/Example.gif" height="auto">
+</p>
