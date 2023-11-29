@@ -1,11 +1,11 @@
 # autoguIGV
-autoguIGV is a script that automates interaction with IGV to search specific sample sites using the python pyautogui library.
+autoguIGV is a script that automates interaction with IGV to search specific sample sites, proving a focus with 2 different alternatives.
 
-## Dependencies
+## Dependencies of alternative 1
 * IGV
 * pyautogui
 
-## Usage
+## Usage of alternative 1
 To use it is important to understand the characteristics of the system, such as the size of the screen, the management of virtual desktops and basic knowledge of python, because the autoguIGV script is a roadmap that each user must adapt to the conditions and use of their computer. . In this case, it was developed for a computer with ubuntu 22.04 and bspwm as a window manager in a 1920 x 1080 resolution with a keyboard configured in US English and the configuration of keyboard shortcuts:
 
 * Open a terminal ("win", "enter")
@@ -31,3 +31,28 @@ python autoguIGV_bspwm.py
 <p align="center">
   <img src="https://github.com/FerAmbriz/autoguIGV/blob/main/Example.gif" height="auto">
 </p>
+
+
+## Dependencies of alternative 2
+* [IGV folder](https://igv.org/doc/desktop/#DownloadPage/)
+* bash
+
+## Usage of alternative 2
+To use it, only modify the script `generate_batch_script.sh` 
+
+```
+IGV="[FOLDER DOWNLOAD]/IGV_Linux_2.16.0/igv.sh"
+
+region=('chr15:89,786,965-89,787,374' 'chr16:23,652,741-23,652,948' 'chr2:47,596,797-47,596,968' 'chr2:47,630,194-47,630,325')
+genes=('FANCI' 'PALB2' 'EPCAM' 'MSH2')
+site=('chr15:89786999-89786999' 'chr16:23652916-23652916' 'chr2:47596828-47596828' 'chr2:47630224-47630224')
+...
+for j in [FOLDER_BAM]/*.bam; 
+snapshotDirectory [FOLDER_OUTPUT]/IGVscreen/PNG
+
+```
+and run
+
+```
+bash generate_batch_script.sh
+```
